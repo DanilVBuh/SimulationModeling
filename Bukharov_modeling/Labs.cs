@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsApplication1;
 
 namespace Bukharov_modeling
 {
@@ -64,5 +65,29 @@ namespace Bukharov_modeling
 			Form form = new Lab14();
 			form.Show();
 		}
-	}
+
+        private void lab15_Click(object sender, EventArgs e)
+        {
+			Form form = new Lab15();
+			form.Show();
+		}
+
+        private void lab16_Click(object sender, EventArgs e)
+        {
+			Form form = new Currency();
+			form.Show();
+		}
+
+        private void lab17_Click(object sender, EventArgs e)
+        {
+			Form form = new Lab17();
+			form.Show();
+		}
+
+        private void lab18_Click(object sender, EventArgs e)
+        {
+			Form form = new Lab18();
+			form.Show();
+		}
+    }
 }
