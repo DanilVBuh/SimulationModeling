@@ -37,8 +37,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.startBtn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.timeValue = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.varianceError = new System.Windows.Forms.Label();
@@ -108,23 +106,6 @@
             this.startBtn.Text = "Reload";
             this.startBtn.UseVisualStyleBackColor = true;
             this.startBtn.Click += new System.EventHandler(this.startBtn_Click);
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(595, 329);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Time: ";
-            // 
-            // timeValue
-            // 
-            this.timeValue.AutoSize = true;
-            this.timeValue.Location = new System.Drawing.Point(634, 329);
-            this.timeValue.Name = "timeValue";
-            this.timeValue.Size = new System.Drawing.Size(14, 13);
-            this.timeValue.TabIndex = 33;
-            this.timeValue.Text = "T";
             // 
             // label4
             // 
@@ -211,8 +192,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.statBtn);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.timeValue);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.varianceError);
@@ -237,8 +216,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Button startBtn;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label timeValue;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label varianceError;

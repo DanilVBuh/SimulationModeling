@@ -190,6 +190,9 @@
     <EmbeddedResource Include="Lab17.resx">
       <DependentUpon>Lab17.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab18.resx">
+      <DependentUpon>Lab18.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab8.1.resx">
       <DependentUpon>Lab8.1.cs</DependentUpon>
     </EmbeddedResource>

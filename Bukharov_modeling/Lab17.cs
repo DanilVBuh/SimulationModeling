@@ -63,8 +63,6 @@ namespace Bukharov_modeling
             while (t1 <= T)
             {
                 double a = random.NextDouble();
-
-                a = random.NextDouble();
                 t1 = t01 - Math.Log(a) / lambda1;
                 if (t1 <= T)
                 {
@@ -77,9 +75,7 @@ namespace Bukharov_modeling
             while (t2 <= T)
             {
                 double a = random.NextDouble();
-
-                a = random.NextDouble();
-                t2 = t02 - Math.Log(a) / lambda1;
+                t2 = t02 - Math.Log(a) / lambda2;
                 if (t2 <= T)
                 {
                     this.chart1.Series[1].Points.AddXY(t2, 2);
@@ -95,8 +91,6 @@ namespace Bukharov_modeling
             while (t1 <= T)
             {
                 double a = random.NextDouble();
-
-                a = random.NextDouble();
                 t1 = t01 - Math.Log(a) / lambda1;
                 if (t1 <= T)
                 {
@@ -108,9 +102,7 @@ namespace Bukharov_modeling
             while (t2 <= T)
             {
                 double a = random.NextDouble();
-
-                a = random.NextDouble();
-                t2 = t02 - Math.Log(a) / lambda1;
+                t2 = t02 - Math.Log(a) / lambda2;
                 if (t2 <= T)
                 {
                     m++;
