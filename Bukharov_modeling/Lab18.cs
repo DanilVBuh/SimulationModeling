@@ -16,7 +16,7 @@ namespace Bukharov_modeling
         int n = 10;
         int x = 0;
         int y = 0;
-        double la = 3;
+        double la = 10;
         double ls = 1;
         public double t = 0;
         public queue q;
@@ -52,24 +52,36 @@ namespace Bukharov_modeling
                 }
 
             }
+            this.chart1.Series[0].Points.Clear();
+            this.chart2.Series[0].Points.Clear();
+            this.chart1.Series[0].Points.AddXY(0, q.count);
+            for (int i = 0; i < n; i++)
+            {
+                double ti = s[i].t - t;
+                if (ti < 0) ti = 0;
+                this.chart2.Series[0].Points.AddXY(i, ti);
+            }
+
         }
 
         public class services : List<service>
         {
             double ls;
             int n;
-            public services(int n, double ls) : base()
+            public Lab18 lab { get; set; }
+            public services(int n, double ls, Lab18 lab) : base()
             {
                 this.n = n;
                 this.ls = ls;
+                this.lab = lab;
                 for (int i = 0; i < this.n; i++)
                 {
-                    this.Add(new service(this.ls));
+                    this.Add(new service(this.ls, this.lab));
                 }
             }
             public void setBusy(double T)
             {
-                foreach(service s in this)
+                foreach (service s in this)
                 {
                     if (s.t == -1)
                     {
@@ -108,13 +120,11 @@ namespace Bukharov_modeling
             public double t { get; set; }
             public double lambda { get; set; }
             public Random random { get; set; } = new Random();
-            public service(double lambda)
+            public Lab18 lab { get; set; }
+            public service(double lambda, Lab18 lab)
             {
                 this.lambda = lambda;
-            }
-            public void getNextEvent()
-            {
-
+                this.lab = lab;
             }
             public void setTime(double T)
             {
@@ -122,9 +132,14 @@ namespace Bukharov_modeling
             }
             public double RV()
             {
-                double a = random.NextDouble();
-                return -1 * Math.Log(a) / lambda;
+                double a = rand();
+                return -1 * Math.Log(lab.random.NextDouble()) / lambda;
             }
+            public double rand()
+            {
+                return this.random.NextDouble();
+            }
+
         }
         public class queue
         {
@@ -155,7 +170,7 @@ namespace Bukharov_modeling
         public Lab18()
         {
             q = new queue(la);
-            s = new services(n, ls);
+            s = new services(n, ls, this);
             InitializeComponent();
             this.timer1.Interval = 100;
         }
