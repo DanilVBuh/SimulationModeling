@@ -12,11 +12,12 @@ namespace Bukharov_modeling
 {
 	public partial class Lab81 : Form
 	{
-		double p = 0.65;
+		double p = 0.5;
 		Random random = new Random();
 		public Lab81()
 		{
 			InitializeComponent();
+			this.Text = "?";
 		}
 
 		private void answerBtn_Click(object sender, EventArgs e)

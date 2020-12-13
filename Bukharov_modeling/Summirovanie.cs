@@ -123,6 +123,7 @@ namespace Bukharov_modeling
 			}
 		}
 
+		//long
 		public void Calculate()
 		{
 			t1 = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();

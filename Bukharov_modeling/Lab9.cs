@@ -47,6 +47,7 @@ namespace Bukharov_modeling
 				e.n = 0;
 		}
 
+		//copy
 		private void startBtn_Click(object sender, EventArgs e)
 		{
 			Restart();

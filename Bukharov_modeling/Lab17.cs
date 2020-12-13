@@ -127,6 +127,7 @@ namespace Bukharov_modeling
             this.fun();
         }
 
+        //long
         public void fun()
         {
             for (int i = 0; i < N; i++)
